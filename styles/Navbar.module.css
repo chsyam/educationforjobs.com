@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.navbar {
+    height: 70px;
+    box-shadow: 3px 3px 24px #afafaf;
+    font-family: 'Poppins';
+    justify-content: space-around;
+
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; */
+}
+
+.navbar,
+.navbar .navLinks {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.navbar .navLinks {
+    column-gap: 20px;
+    list-style: none;
+}
+
+.navbar .navLinks li:hover {
+    border: 2px solid rgb(92, 71, 253);
+}
+
+.navbar .navLinks li,
+.followButton {
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: rgb(92, 71, 253);
+    font-weight: 500;
+}
+
+.followButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+    font-size: 20px;
+}
+
+.followButton:hover {
+    font-size: 24px;
+}
+
+.followButton div:nth-child(1) {
+    padding: 10px 0 0 0;
+    color: red;
+    font-size: 30px;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        zoom: 0.5;
+    }
+}

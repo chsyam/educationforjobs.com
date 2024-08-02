@@ -1,0 +1,109 @@
+.addPost {
+    width: 90%;
+    font-family: 'Poppins';
+    margin: 40px 5% 40px 5%;
+}
+
+.preview {
+    background-color: #FFFFFF;
+    min-height: 10px;
+    padding: 5px;
+}
+
+.previewContent {
+    border: 1px dashed rgb(210, 210, 210);
+}
+
+.form .heading {
+    font-size: 30px;
+}
+
+.form {
+    background-color: #eaeaea;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.form .divSection {
+    margin: 10px 0 30px 0;
+}
+
+.form input {
+    width: 100%;
+    outline: none;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #eaeaea;
+}
+
+.form textarea {
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    border: 2px solid #eaeaea;
+    margin: 5px 0;
+}
+
+.label {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form .submitButton {
+    background-color: #1e00ff;
+    padding: 10px;
+    color: #FFF;
+    border: 1px solid #1e00ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fileUpload {
+    width: max-content;
+    margin: 10px 0 30px 0;
+}
+
+.fileContent .uploadButton {
+    border-radius: 4px;
+}
+
+.inputFile input {
+    margin: 0;
+    padding: 0;
+}
+
+.fileUpload input::file-selector-button {
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid white;
+    margin-right: 16px;
+    transition: background-color 200ms;
+}
+
+.fileUpload input::file-selector-button:active {
+    background-color: #e5e7eb;
+}
+
+.fileUpload .uploadButton {
+    background-color: #FFF;
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: min-content;
+}
+
+.uploadStatus {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
