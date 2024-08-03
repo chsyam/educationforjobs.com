@@ -6,8 +6,11 @@ import axios from "axios";
 
 async function fetchData() {
     try {
-        const response = await axios.get('https://educationforjobs.onrender.com/api/blogs/all');
-        console.log("response", response.data);
+        const response = await axios.get('https://educationforjobs.onrender.com/api/blogs/all', {
+            next: {
+                revalidate: 60
+            }
+        });
         return response.data;
     } catch (error) {
         console.log("Error fetching Blogs list" + error);
@@ -21,26 +24,23 @@ export default function Blogs() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        document.title = "Blogs | EducationForJobs";
         const fetchBlogs = async () => {
-            try {
-                const blogsList = await fetchData();
-                setLoading(false);
-                if (blogsList) {
-                    setBlogsData(blogsList);
-                }
-                else if (blogsList?.length == 0) {
-                    setBlogsFound(false);
-                } else {
-                    setBlogsFound(false);
-                }
-            } catch (error) {
-                console.log(error);
-            }
+            const blogsList = await fetchData();
+            console.log("res", blogsList);
             setLoading(false);
+            if (blogsList) {
+                setBlogsData(blogsList);
+            }
+            else if (blogsList?.length == 0) {
+                setBlogsFound(false);
+            } else {
+                setBlogsFound(false);
+            }
         }
         fetchBlogs();
-    }, []);
+
+        document.title = "Blogs | EducationForJobs";
+    }, [])
 
     return (
         <div className={styles.blogContent}>
